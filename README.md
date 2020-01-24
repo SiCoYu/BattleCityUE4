@@ -1,49 +1,37 @@
-[![appveyor build](https://ci.appveyor.com/api/projects/status/github/bitwarden/browser?branch=master&svg=true)](https://ci.appveyor.com/project/bitwarden/browser)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/bitwarden-browser/localized.svg)](https://crowdin.com/project/bitwarden-browser)
-[![Join the chat at https://gitter.im/bitwarden/Lobby](https://badges.gitter.im/bitwarden/Lobby.svg)](https://gitter.im/bitwarden/Lobby)
+# Battle City (UE4)
+这是我，在哔哩哔哩的视频教程的工程文件, 使用的是虚幻4.24版本。
 
-# Bitwarden Browser Extension
+# 按键
+### 玩家1
+- 上 `W`
+- 右 `D`
+- 下 `S`
+- 左 `A`
+- A `J` 
+- B `K`
+- 暂停 `C`
+- 开始 `V`
 
-<a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/3C4iKO0.png" width="64" height="64"></a>
-<a href="https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/" target="_blank"><img src="https://imgur.com/ihXsdDO.png" width="64" height="64"></a>
-<a href="https://www.microsoft.com/store/p/bitwarden-free-password-manager/9p6kxl0svnnl" target="_blank"><img src="https://imgur.com/RlmwPGO.png" width="64" height="64"></a>
-<a href="https://addons.opera.com/extensions/details/bitwarden-free-password-manager/" target="_blank"><img src="https://imgur.com/nSJ9htU.png" width="64" height="64"></a>
-<a href="https://bitwarden.com/#download" target="_blank"><img src="https://imgur.com/ENbaWUu.png" width="64" height="64"></a>
-<a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/EuDp4vP.png" width="64" height="64"></a>
-<a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/z8yjLZ2.png" width="64" height="64"></a>
-<a href="https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/" target="_blank"><img src="https://imgur.com/MQYBSrD.png" width="64" height="64"></a>
+### 玩家2
+- 上 `UP`
+- 右 `RIGHT`
+- 下 `DOWN`
+- 左 `LEFT`
+- A `小键盘数字1`
+- B `小键盘数字2`
 
-The Bitwarden browser extension is written using the Web Extension API and Angular.
+# 控制
+1. 菜单-选择 `暂停`
+2. 菜单-确认 `开始`
+3. 关卡选择-减少 `A`
+4. 关卡选择-增加 `B`
+5. 关卡选择-开始 `开始`
+4. 开火 `A`/`B`
 
-![](https://raw.githubusercontent.com/bitwarden/brand/master/screenshots/browser-chrome.png "My Vault")
-
-# Build/Run
-
-**Requirements**
-
-- [Node.js](https://nodejs.org) v8.11 or greater
-- [Gulp](https://gulpjs.com/) (`npm install --global gulp-cli`)
-- Chrome (preferred), Opera, or Firefox browser
-
-**Run the app**
-
-```
-npm install
-npm run build:watch
-```
-
-You can now load the extension into your browser through the browser's extension tools page:
-
-- Chrome/Opera:
-  1. Type `chrome://extensions` in your address bar to bring up the extensions page.
-  2. Enable developer mode (checkbox)
-  3. Click the "Load unpacked extension" button, navigate to the `build` folder of your local extension instance, and click "Ok".
-- Firefox
-  1. Type `about:debugging` in your address bar to bring up the add-ons page.
-  2. Click the `Load Temporary Add-on` button, navigate to the `build/manifest.json` file, and "Open".
-
-# Contribute
-
-Code contributions are welcome! Please commit any pull requests against the `master` branch. Learn more about how to contribute by reading the [`CONTRIBUTING.md`](CONTRIBUTING.md) file.
-
-Security audits and feedback are welcome. Please open an issue or email us privately if the report is sensitive in nature. You can read our security policy in the [`SECURITY.md`](SECURITY.md) file.
+# 地图编辑
+- 创建默认地图
+    1. 先在 `Assets/Levels` 目录中创建复制一份已有地图，起名 `Level_序号` 
+    2. 修改 `BP_GameInstance` 的 `MaxLevel`
+    3. 打开地图 `Editor` 运行并编辑
+    4. 按 `开始` 保存地图
+    5. 打开 `MainMenu` 地图，运行开始游戏

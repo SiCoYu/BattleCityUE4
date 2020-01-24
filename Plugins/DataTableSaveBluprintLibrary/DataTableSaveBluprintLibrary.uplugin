@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "DataTableUpdateLibrary",
+	"Description": "Help developers save data tables",
+	"Category": "Blueprints",
+	"CreatedBy": "wuguyannian",
+	"CreatedByURL": "https://wuguyannian.com",
+	"DocsURL": "https://wuguyannian.com/2020/01/05/ue4plugin/ue4-plugin-datatablesave",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.24.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "DataTableSaveBluprintLibrary",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32"
+			]
+		}
+	]
+}

@@ -36,4 +36,4 @@
     4. 按 `开始` 保存地图
     5. 打开 `MainMenu` 地图，运行开始游戏
 # 支持我
-![Preview](https://gitee.com/wuguyannian/BattleCityUE4/master/res/support.png)
+![Preview](https://gitee.com/wuguyannian/BattleCityUE4/raw/master/res/support.png)

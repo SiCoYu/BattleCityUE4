@@ -35,3 +35,5 @@
     3. 打开地图 `Editor` 运行并编辑
     4. 按 `开始` 保存地图
     5. 打开 `MainMenu` 地图，运行开始游戏
+# 支持我
+![Preview](https://gitee.com/wuguyannian/BattleCityUE4/master/res/support.png)

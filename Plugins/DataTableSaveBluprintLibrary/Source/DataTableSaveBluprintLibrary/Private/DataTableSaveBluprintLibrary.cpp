@@ -1,4 +1,6 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+/* Copyright (C) 2020 Wuguyannian - All Rights Reserved
+ * This plugin is downloadable from the UE4 Marketplace
+ */
 
 #include "DataTableSaveBluprintLibrary.h"
 

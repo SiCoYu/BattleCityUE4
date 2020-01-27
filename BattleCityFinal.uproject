@@ -6,7 +6,8 @@
 	"Plugins": [
 		{
 			"Name": "DataTableSaveBluprintLibrary",
-			"Enabled": true
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/5abf886c0a14469d979928d01cacba83"
 		},
 		{
 			"Name": "ElectronicNodes",

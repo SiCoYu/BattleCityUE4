@@ -1,4 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/* Copyright (C) 2020 Wuguyannian - All Rights Reserved
+ * This plugin is downloadable from the UE4 Marketplace
+ */
 
 
 #include "DataTableSaveFunctionLibrary.h"
@@ -12,15 +14,12 @@ UDataTable* UDataTableSaveFunctionLibrary::GetDataTable(UObject* WorldContextObj
 	return LoadObject<UDataTable>(nullptr, *TablePath, nullptr, LOAD_None, nullptr);
 }
 
-void UDataTableSaveFunctionLibrary::StartFilling(UDataTable* Table, bool ClearAll)
+void UDataTableSaveFunctionLibrary::ClearDataTable(UDataTable* Table)
 {
-	if (ClearAll)
-	{
-		Table->EmptyTable();
-	}
+	Table->EmptyTable();
 }
 
-void UDataTableSaveFunctionLibrary::EndFilling(UDataTable* Table)
+void UDataTableSaveFunctionLibrary::SaveDataTable(UDataTable* Table)
 {
 	Table->Modify(true);
 	Table->OnDataTableImported().Broadcast();
@@ -42,17 +41,15 @@ void UDataTableSaveFunctionLibrary::EndFilling(UDataTable* Table)
 	FinalPackageFilename = FString::Printf(TEXT("%s.%s"), *BaseFilename, *Extension);
 	
 	bool bWasSuccessful = GEngine->Exec(NULL, *FString::Printf(TEXT("OBJ SAVEPACKAGE PACKAGE=\"%s\" FILE=\"%s\" SILENT=true"), *PackageName, *FinalPackageSavePath));
-	FText FailureReason;
 	
 	if (!bWasSuccessful)
-	{
-		FailureReason = FText::Format(NSLOCTEXT("UnrealEd", "SaveAssetFailed", "The asset '{0}' ({1}) failed to save."), FText::FromString(PackageName), FText::FromString(FinalPackageFilename));		
+	{	
+		UE_LOG(LogDataTable, Error, TEXT("SaveDataTable - The asset '{0}' ({1}) failed to save."), *PackageName, *FinalPackageFilename);
 	}
 	else
 	{
-		FailureReason = FText::Format(NSLOCTEXT("UnrealEd", "SaveAssetSuccessed", "The asset '{0}' ({1}) has been saved."), FText::FromString(PackageName), FText::FromString(FinalPackageFilename));
+		UE_LOG(LogDataTable, Display, TEXT("SaveDataTable - The asset '{0}' ({1}) has been saved."), *PackageName, *FinalPackageFilename);
 	}
-	FMessageDialog::Open(EAppMsgType::Ok, FailureReason);
 }
 
 void UDataTableSaveFunctionLibrary::RemoveDataTableRowFromName(UDataTable* Table, FName RowName)

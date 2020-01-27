@@ -1,4 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/* Copyright (C) 2020 Wuguyannian - All Rights Reserved
+ * This plugin is downloadable from the UE4 Marketplace
+ */
 
 #pragma once
 
@@ -20,13 +22,13 @@ class DATATABLESAVEBLUPRINTLIBRARY_API UDataTableSaveFunctionLibrary : public UB
 	UFUNCTION(BlueprintCallable, Category = "DataTable", meta = (WorldContext = "WorldContextObject"))
 	static UDataTable* GetDataTable(UObject* WorldContextObject, FString TablePath);
 
-	/** Clear a DataTable given */
+	/** Clear the DataTable given */
 	UFUNCTION(BlueprintCallable, Category = "DataTable")
-	static void StartFilling(UDataTable* Table, bool ClearAll = true);
+	static void ClearDataTable(UDataTable* Table);
 
-	/** Clear a DataTable given */
+	/** Save the DataTable given */
 	UFUNCTION(BlueprintCallable, Category = "DataTable")
-	static void EndFilling(UDataTable* Table);
+	static void SaveDataTable(UDataTable* Table);
 
 	/** Remove a Row from a DataTable given a RowName */
 	UFUNCTION(BlueprintCallable, Category = "DataTable")

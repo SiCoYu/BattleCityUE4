@@ -1,4 +1,6 @@
-// Some copyright should be here...
+/* Copyright (C) 2020 Wuguyannian - All Rights Reserved
+ * This plugin is downloadable from the UE4 Marketplace
+ */
 
 using UnrealBuildTool;
 

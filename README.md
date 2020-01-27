@@ -1,5 +1,5 @@
 # Battle City (UE4)
-This is a project for my video tutorial on bilibili, use Unreal 4.24。
+This is a project for my video tutorial on [bilibili](https://www.bilibili.com/video/av78675744), use Unreal 4.24。
 
 # Keyborad
 ### Player 1
@@ -12,13 +12,13 @@ This is a project for my video tutorial on bilibili, use Unreal 4.24。
 - PAUSE `C`
 - START `V`
 
-### 玩家2
+### Player 2
 - UP `UP`
 - RIGHT `RIGHT`
 - DOWN `DOWN`
 - LEFT `LEFT`
-- A `小键盘数字1`
-- B `小键盘数字2`
+- A `NUM1`
+- B `NUM2`
 
 # 控制
 1. MENU-SELECT `PAUSE`
